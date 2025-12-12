@@ -23,6 +23,7 @@ let txt = document.getElementById("changing-word");
 let idx = 0;
 
 function swapWord() {
+  if (!txt) return;
   txt.classList.add("fade-out");
 
   setTimeout(() => {
@@ -33,8 +34,10 @@ function swapWord() {
   }, 250);
 }
 
-swapWord();
-setInterval(swapWord, 5000);
+if (txt) {
+  swapWord();
+  setInterval(swapWord, 5000);
+}
 
 let popup = document.getElementById("auth-modal");
 let xBtn = document.getElementById("close-modal");
@@ -70,32 +73,45 @@ function hidePop() {
   popup.classList.remove("active");
 }
 
-xBtn.onclick = hidePop;
 
-popup.onclick = (e) => {
-  if (e.target === popup) hidePop();
-};
+if (xBtn) {
+  xBtn.onclick = hidePop;
+}
 
-toLog.onclick = (e) => {
-  e.preventDefault();
-  showPop("login");
-};
+if (popup) {
+  popup.onclick = (e) => {
+    if (e.target === popup) hidePop();
+  };
+}
 
-toSign.onclick = (e) => {
-  e.preventDefault();
-  showPop("signup");
-};
+if (toLog) {
+  toLog.onclick = (e) => {
+    e.preventDefault();
+    showPop("login");
+  };
+}
 
-signForm.onsubmit = (e) => {
-  e.preventDefault();
-  alert("Account created! \nEmail: " + document.getElementById("signup-email").value);
-  signForm.reset();
-  hidePop();
-};
+if (toSign) {
+  toSign.onclick = (e) => {
+    e.preventDefault();
+    showPop("signup");
+  };
+}
 
-logForm.onsubmit = (e) => {
-  e.preventDefault();
-  alert("Logged in! \nUser: " + document.getElementById("login-email").value);
-  logForm.reset();
-  hidePop();
-};
+if (signForm) {
+  signForm.onsubmit = (e) => {
+    e.preventDefault();
+    alert("Account created! \nEmail: " + document.getElementById("signup-email").value);
+    signForm.reset();
+    hidePop();
+  };
+}
+
+if (logForm) {
+  logForm.onsubmit = (e) => {
+    e.preventDefault();
+    alert("Logged in! \nUser: " + document.getElementById("login-email").value);
+    logForm.reset();
+    hidePop();
+  };
+}

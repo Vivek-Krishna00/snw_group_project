@@ -309,6 +309,8 @@ header.scrolled {
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
 }
 
 .tech-card:hover,
@@ -479,6 +481,9 @@ header.scrolled {
 
 .t-content {
     padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .t-content h3 {
@@ -503,6 +508,11 @@ header.scrolled {
     background: rgba(99, 102, 241, 0.1);
     color: #818cf8;
     border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.t-content .action-btn {
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 .img-grid {

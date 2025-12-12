@@ -1,0 +1,347 @@
+:root {
+    --nav-height: 80px;
+    --bg-card: #121212;
+    --accent-purple: #5D50C6;
+    --tag-bg: #1A1A2E;
+    --tag-text: #8b80f9;
+    --border-radius-card: 16px;
+}
+
+
+.community-hero {
+    position: relative;
+    padding: 120px 0 60px;
+    /* Account for fixed header */
+    text-align: center;
+}
+
+.community-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    color: #9ca3af;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.hero-video-bg {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 240px minmax(300px, 1fr) 280px;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    align-items: start;
+}
+
+
+.sidebar-menu,
+.sidebar-right {
+    position: sticky;
+    top: 100px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    color: #9ca3af;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: var(--bg-card);
+    color: #fff;
+    border-left: 3px solid var(--accent-purple);
+}
+
+.sidebar-icon {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+
+.trending-box {
+    background: var(--bg-card);
+    border-radius: var(--border-radius-card);
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-title {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.trend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.trend-item:last-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.trend-info h5 {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.trend-info p {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+.trend-rank-1 {
+    color: #ff7675;
+    font-weight: bold;
+}
+
+.trend-rank-2 {
+    color: #74b9ff;
+    font-weight: bold;
+}
+
+.trend-rank-2 {
+    color: #55efc4;
+    font-weight: bold;
+    /* Assuming rank 3 was meant */
+}
+
+
+
+.create-post {
+    background: var(--bg-card);
+    border-radius: var(--border-radius-card);
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+}
+
+.post-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-icons span {
+    margin-right: 20px;
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.action-icons span:hover {
+    color: var(--accent-purple);
+}
+
+.btn-purple {
+    background-color: var(--accent-purple);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(93, 80, 198, 0.4);
+}
+
+
+.feed-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius-card);
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feed-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.user-info h4 {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.user-info span {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+.card-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card-desc {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.tags-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+}
+
+.social-stats {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+.btn-white-pill {
+    background: white;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-white-pill:hover {
+    background: #e5e5e5;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .sidebar-right {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-menu {
+        display: none;
+    }
+
+    .community-hero h1 {
+        font-size: 2.5rem;
+    }
+}

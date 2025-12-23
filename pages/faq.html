@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Art Vista - Frequently Asked Questions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Satisfy&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/faq.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="nav-wrap">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-palette"></i>
+                <div class="logo-text">
+                    <span class="art-text">Art</span>
+                    <span class="vista-text">Vista</span>
+                </div>
+            </a>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            <ul class="menu-items" id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#techniques">Techniques</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+            </ul>
+            <div style="margin-left:20px;display:flex;align-items:center;gap:12px;">
+                <a href="../index.html" class="action-btn">Back to Home</a>
+                <a class="action-btn" href="#">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="faq-hero">
+        <div class="hero-content">
+            <h1>Frequently Asked Questions</h1>
+            <p>Got questions? We've got answers.</p>
+        </div>
+    </section>
+
+    <section class="faq-section container">
+
+        <div class="faq-group">
+            <h2>General & Account</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is Art Vista free to use?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! Browsing techniques, reading blogs, and joining the community is completely free. We also
+                        offer premium courses and shop items for purchase.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I create a creator profile?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Simply click "Get Started" in the top right, sign up for an account, and navigate to your profile
+                        settings to enable "Creator Mode".</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-group">
+            <h2>Shop & Orders</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What payments do you accept?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>We accept all major credit cards, PayPal, and Apple Pay for shop purchases.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do you ship internationally?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we ship to over 50 countries. Shipping rates are calculated at checkout based on your
+                        location.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="main-wrapper">
+            <div class="foot-cols">
+                <div class="footer-column">
+                    <h3>Art Vista</h3>
+                    <p>Connecting artists worldwide.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="foot-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; SNW - Group Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="auth-modal" class="popup">
+        <div class="popup-box">
+            <div class="popup-header">
+                <h2 id="modal-title">Sign Up</h2>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <div class="popup-body">
+                <form id="signup-form" class="auth-form active">
+                    <div class="form-group">
+                        <input type="email" id="signup-email" placeholder="Email" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signup-password" placeholder="Password" required />
+                    </div>
+                    <button type="submit" class="action-btn btn-submit">Sign Up</button>
+                    <p class="form-toggle">
+                        Already have an account? <a href="#" id="toggle-to-login">Sign In</a>
+                    </p>
+                </form>
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <input type="email" id="login-email" placeholder="Email" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="login-password" placeholder="Password" required />
+                    </div>
+                    <button type="submit" class="action-btn btn-submit">Sign In</button>
+                    <p class="form-toggle">
+                        Don't have an account? <a href="#" id="toggle-to-signup">Sign Up</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+    <script>
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

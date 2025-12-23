@@ -45,6 +45,23 @@ let signForm = document.getElementById("signup-form");
 let logForm = document.getElementById("login-form");
 let toLog = document.getElementById("toggle-to-login");
 let toSign = document.getElementById("toggle-to-signup");
+const menu = document.querySelector('#menu');
+const hamburger = document.querySelector('.hamburger');
+const header = document.querySelector('#header');
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.menu-items a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      menu.classList.remove('active');
+    });
+  });
+}
 let popTitle = document.getElementById("modal-title");
 
 document.querySelectorAll(".action-btn").forEach(b => {
